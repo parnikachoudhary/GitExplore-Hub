@@ -1,0 +1,243 @@
+:root {
+    --primary: #2ea44f;
+    --bg-color: #ffffff;
+    --text-color: #24292e;
+    --card-bg: #f6f8fa;
+    --github-layer: rgba(0, 0, 0, 0.648);
+    --github-text: #55d0db;
+}
+
+[data-theme="dark"] {
+    --bg-color: #303a50;
+    --text-color: #c9d1d9;
+    --card-bg: #161b22;
+    --github-layer: rgba(0, 0, 0, 0.638);
+    --github-text: #55d0db;
+} 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    height: 40px;
+    padding: 10px;
+    background-color: #333333;
+}
+
+.github-write {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: clamp(3rem, 6vw, 7rem);
+    margin-bottom: 10px;
+    color: var(--github-text);
+    font-weight: bold;
+}
+
+.layer {
+    background-color: var(--github-layer);
+    background-size: cover;
+    height: 70vh;
+}
+
+.github-head {
+    height: 70vh;
+    background-image: url("images/image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 770px;
+}
+
+.main-layout {   
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid #c88b80;
+    min-height: 50px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #315e6f;
+    flex-wrap: wrap;
+}
+
+.date-filter {
+    height: 35px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #444444;
+    color: #bec5a8;
+    border-radius: 7px;
+    border: none;
+}
+
+.date-of-creation {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.mode {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px; 
+}
+
+.app-mode {
+    height: 40px;
+    width: 100%;
+    max-width: 280px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #444444;
+    color: #bec5a8;
+    border-radius: 7px;
+    border: none;
+}
+
+.theme-toggle-btn {
+    height: 50px;
+    width: 170px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #bec5a8;
+    border: none;
+}
+
+.recent-card,
+.favorites-section {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    border: 2px solid #c88b80;
+}
+
+.input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #c88b80;
+    padding: 1rem;
+    height: 40px;
+    border-radius: 7px;
+    background-color: #315e6f;
+    margin: 20px;
+}
+
+.user-input {
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    height: 40px;
+    font-size: 25px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background-color: #52dbbd;
+    border: none;
+}
+
+.search-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.25rem;
+    background-color: #276d6c;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.view-profile-btn,
+.fav-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+}
+
+.view-profile-btn,
+.fav-btn,
+.delete-search, 
+.recent-item,
+.theme-toggle-btn, 
+.remove-fav, 
+.app-mode:hover {
+    cursor: pointer;
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    font-size: 1.5rem;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.pagination {
+    position: fixed;
+    bottom: 10px;
+    left: 7px;
+    background: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.issue-label {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin: 2px;
+}
