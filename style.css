@@ -141,6 +141,7 @@ nav {
     padding: 15px;
     width: 300px;
     border: 2px solid #c88b80;
+    cursor: pointer;
 }
 
 .input-div {
